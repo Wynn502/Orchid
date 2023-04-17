@@ -7,21 +7,21 @@ using UnityEngine.XR.ARSubsystems;
 
 public class PlacementController : MonoBehaviour
 {
-    /// <summary>ĞèÒª°Ú·ÅµÄÄ£ĞÍ</summary>
+    /// <summary>éœ€è¦æ‘†æ”¾çš„æ¨¡å‹</summary>
     public GameObject Orchard;
-    /// <summary>×¼ĞÇÄ£ĞÍ</summary>
+    /// <summary>å‡†æ˜Ÿæ¨¡å‹</summary>
     public GameObject placementIndicator;
-    /// <summary>·ÅÖÃºó¾Í²»¸øËûÔÙ·ÅÖÃÄ£ĞÍÁË£©</summary>
+    /// <summary>æ”¾ç½®åå°±ä¸ç»™ä»–å†æ”¾ç½®æ¨¡å‹äº†ï¼‰</summary>
     private bool m_IsPlaceObject = false;
-    /// <summary>ÉäÏß¼ì²â¹ÜÀí</summary>
+    /// <summary>å°„çº¿æ£€æµ‹ç®¡ç†</summary>
     private ARRaycastManager m_ARRaycastManager;
-    /// <summary>°Ú·Å×ËÊÆ</summary>
+    /// <summary>æ‘†æ”¾å§¿åŠ¿</summary>
     private Pose m_PlacementPose;
-    /// <summary>ÊÇ·ñ¿ÉÒÔ°Ú·Å</summary>
+    /// <summary>æ˜¯å¦å¯ä»¥æ‘†æ”¾</summary>
     private bool m_PlacementPoseIsValid = false;
-    /// <summary>ÉäÏßÃüÖĞ¶ÔÏó¼¯ºÏ</summary>
+    /// <summary>å°„çº¿å‘½ä¸­å¯¹è±¡é›†åˆ</summary>
     private List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
-    /// <summary>ÆÁÄ»ÖĞĞÄÎ»ÖÃ</summary>
+    /// <summary>å±å¹•ä¸­å¿ƒä½ç½®</summary>
     private Vector2 m_ScreenCenter;
 
 
@@ -59,7 +59,7 @@ public class PlacementController : MonoBehaviour
         }
     }
 
-    /// <summary>¸üĞÂ°Ú·Å×ËÌ¬</summary>
+    /// <summary>æ›´æ–°æ‘†æ”¾å§¿æ€</summary>
     private void updatePlacementPose()
     {
         // change this code
@@ -77,7 +77,7 @@ public class PlacementController : MonoBehaviour
         }
     }
 
-    /// <summary>¸üĞÂÕ¹Ê¾Î»ÖÃÖ¸Ê¾Æ÷</summary>
+    /// <summary>æ›´æ–°å±•ç¤ºä½ç½®æŒ‡ç¤ºå™¨</summary>
     private void updatePlacementIndicator()
     {
         placementIndicator?.SetActive(m_PlacementPoseIsValid);
@@ -88,7 +88,7 @@ public class PlacementController : MonoBehaviour
         }
     }
 
-    /// <summary>·ÅÖÃÎï¼ş</summary>
+    /// <summary>æ”¾ç½®ç‰©ä»¶</summary>
     private void placeObject()
     {
         if (Orchard == null) return;
@@ -100,8 +100,8 @@ public class PlacementController : MonoBehaviour
         placementIndicator.SetActive(false);
     }
 
-    // <summary>ÅĞ¶ÏÊÇ·ñµã»÷ÔÚUIÉÏÃæ</summary>
-    private bool isTouchUI()
+    // <summary>åˆ¤æ–­æ˜¯å¦ç‚¹å‡»åœ¨UIä¸Šé¢</summary>
+    /*private bool isTouchUI()
     {
         if (UnityEngine.EventSystems.EventSystem.current == null) return false;
 
@@ -116,7 +116,7 @@ public class PlacementController : MonoBehaviour
         }
 
         return false;
-    }
+    }*/
 
 }
 
